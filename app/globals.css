@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Green tones for primary */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Aqua tones for secondary */
+    --secondary: 172 66% 50%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Light aqua for accent */
+    --accent: 168 73% 96%;
+    --accent-foreground: 222 47% 11%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 142 76% 36%;
+    
+    --radius: 0.5rem;
+    
+    /* Chart colors */
+    --chart-1: 142 76% 36%;
+    --chart-2: 172 66% 50%;
+    --chart-3: 160 84% 39%;
+    --chart-4: 145 63% 42%;
+    --chart-5: 180 75% 60%;
+  }
+  
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Darker green tones for primary in dark mode */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Darker aqua tones for secondary in dark mode */
+    --secondary: 172 66% 40%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* Darker aqua accent in dark mode */
+    --accent: 168 80% 14%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 142 76% 36%;
+    
+    /* Chart colors for dark mode */
+    --chart-1: 142 70% 45%;
+    --chart-2: 172 60% 50%;
+    --chart-3: 160 75% 40%;
+    --chart-4: 145 60% 55%;
+    --chart-5: 180 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
